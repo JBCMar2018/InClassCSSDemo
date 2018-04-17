@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<a href="/add">Add a car</a>
+<!--This displays a list of cars-->
+<img src="/img/person.jpg" alt="This is supposed to be a person">
+<img class="apple" src="/img/apple.jpg" alt="This is supposed to be an apple">
+
+<!--What W3 Schools should have done-->
+<ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+</ul>
+
+<div th:each="eachCar:${cars}">
+    <h2 th:text="${eachCar.brand}"></h2>
+    <img class="car" th:src="${eachCar.image}">
+
+</div>
+</body>
+</html>

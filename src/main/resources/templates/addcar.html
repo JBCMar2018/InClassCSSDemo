@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<header>This is my header</header>
+<form action="/savecar" th:object="${aCar}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+    <label for="brand" id="brandid">This is the brand id</label><input type="text" th:field="*{brand}">
+    <input type="text" th:field="*{image}">
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

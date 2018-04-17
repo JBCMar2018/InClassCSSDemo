@@ -4,6 +4,7 @@ public class Vehicle {
     private int weight;
     private String brand;
     private int speed;
+    private String image;
 
     public Vehicle() {
     }
@@ -65,5 +66,11 @@ public class Vehicle {
       return this.brand+" has passed the "+v.getBrand();
     }
 
+    public String getImage() {
+        return image;
+    }
 
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
